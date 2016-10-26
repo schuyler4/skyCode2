@@ -6,3 +6,6 @@ myenv
 ./myenv
 *.pyo
 __pycache__/
+/__pycache__
+data.db
+views/pycache
