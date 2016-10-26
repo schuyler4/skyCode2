@@ -1,2 +1,8 @@
 secret.py
 __pycache__
+*.pyc
+test.db
+myenv
+./myenv
+*.pyo
+__pycache__/
