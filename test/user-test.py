@@ -1,19 +1,17 @@
-import os
-import flaskr
-import unittest
-import tempfile
+from unittest import TestCase
+from app import app
 
-class FlaskrTestCase(unittest.TestCase):
-    
+class AppTestCase(TestCase):
+
     def setUp(self):
-        self.db_fd, flaskr.app.config['DATABASE'] = tempfile.mkstemp()
-        flaskr.app.config['TESTING'] = True
-        self.app = flaskr.app.test_client()
-        flaskr.init_db()
+        self.app = app
+        self.client
+        self.client = self.app.test_client()
 
     def tearDown(self):
-        os.close(self.db_fd)
-        os.unlink(flaskr.app.config['DATABASE'])
+        pass
 
 if __name__ == '__main__':
     unittest.main()
+
+    

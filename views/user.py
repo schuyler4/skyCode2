@@ -54,9 +54,21 @@ class Logout(MethodView):
 class Profile(MethodView):
     
 	def get(self):
-		pass
+		#username = session['username']
+		logged_in = session['loggedIn']
+		print(logged_in)
+		#logged_in_username = session['username']
+
+		#url_username = request.args.get('username')
+		#print(url_username)
+		#print(logged_in_username)
+
+		if logged_in:
+			return render_template('profile.html')
+		else:
+			return redirect('/login')
 
 	def post(self):
-    	pass'''
+		pass
 
 

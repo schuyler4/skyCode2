@@ -6,12 +6,13 @@ app = Flask(__name__)
 app.secret_key = '()SDYFUHISDJUHF&**UI&^*&^YUHJ'
 
 from views.basic import Home
-from views.user import Sign_Up, Login, Logout
+from views.user import Sign_Up, Login, Logout, Profile
 
 app.add_url_rule('/', view_func=Home.as_view('home'))
 app.add_url_rule('/signup', view_func=Sign_Up.as_view('sign_up'))
 app.add_url_rule('/login', view_func=Login.as_view('login'))	
 app.add_url_rule('/logout', view_func=Logout.as_view('logout'))
+app.add_url_rule('/profile', view_func=Profile.as_view('profile'))
 
 if __name__ == "__main__":
 	app.run(debug=True);		

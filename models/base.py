@@ -4,8 +4,8 @@ from sqlalchemy.orm import relationship, backref, sessionmaker
 
 Base = declarative_base()
 
-import models.user
-#from Code import Project
+#import user
+#import code
 
 engine = create_engine("sqlite:///data.db")
 Base.metadata.create_all(engine, checkfirst=True)
